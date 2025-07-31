@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Mock Interviewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              orbitron: ['"Orbitron"', 'sans-serif'],
+              mono: ['"Roboto Mono"', 'monospace'],
+            },
+            colors: {
+              'cyber-bg': '#0d1a26',
+              'cyber-surface': '#132335',
+              'cyber-border': '#29c5f6',
+              'cyber-glow': '#29c5f6',
+              'cyber-text': '#dcf3f6',
+              'cyber-accent': '#e6007a',
+            },
+            keyframes: {
+              flicker: {
+                '0%, 100%': { opacity: 1 },
+                '50%': { opacity: 0.7 },
+              },
+              pulse: {
+                '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+                '50%': { transform: 'scale(1.05)', opacity: 0.8 },
+              },
+              fadeInUp: {
+                'from': { opacity: 0, transform: 'translateY(20px)' },
+                'to': { opacity: 1, transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
+              },
+              fadeOut: {
+                'from': { opacity: 1 },
+                'to': { opacity: 0 },
+              },
+              typewriter: {
+                'from': { width: '0' },
+                'to': { width: '100%' },
+              },
+              blinkCaret: {
+                'from, to': { borderColor: 'transparent' },
+                '50%': { borderColor: '#29c5f6' },
+              },
+              'infinite-scroll': {
+                'from': { transform: 'translateX(0)' },
+                'to': { transform: 'translateX(-50%)' },
+              },
+              'text-glow-sweep': {
+                '0%': { backgroundPosition: '-200% center' },
+                '100%': { backgroundPosition: '200% center' },
+              },
+            },
+            animation: {
+              flicker: 'flicker 1.5s infinite',
+              pulse: 'pulse 2s ease-in-out infinite',
+              'infinite-scroll': 'infinite-scroll 40s linear infinite',
+              'text-glow-sweep': 'text-glow-sweep 3s ease-in-out infinite',
+            },
+            boxShadow: {
+              'glow': '0 0 15px rgba(41, 197, 246, 0.7), 0 0 5px rgba(41, 197, 246, 1)',
+              'accent-glow': '0 0 15px rgba(230, 0, 122, 0.7), 0 0 5px rgba(230, 0, 122, 1)',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "vite": "https://esm.sh/vite@^7.0.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.7.0",
+    "@vitejs/plugin-basic-ssl": "https://esm.sh/@vitejs/plugin-basic-ssl@^2.1.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-cyber-bg text-cyber-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
